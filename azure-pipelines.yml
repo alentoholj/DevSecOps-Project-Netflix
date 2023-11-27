@@ -1,0 +1,101 @@
+# Docker
+# Build a Docker image
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+- main
+
+resources:
+- repo: self
+
+pool:
+
+  name: carpel-pool
+
+  demands: java
+
+
+
+steps:
+
+- task: SonarSource.sonarcloud.14d9cde6-c1da-4d55-aa01-2965cd301255.SonarCloudPrepare@1
+
+  displayName: 'Prepare analysis on SonarCloud'
+
+  inputs:
+
+    SonarCloud: 'Sonar for Netflix'
+
+    organization: carpel1921
+
+    scannerMode: CLI
+
+    configMode: manual
+
+    cliProjectKey: 'carpel1921_DevSecOps-Project.git'
+
+    cliProjectName: 'DevSecOps-Project.git'
+
+
+
+- task: Docker@2
+
+  displayName: 'Docker build'
+
+  inputs:
+
+    containerRegistry: 'DockerHUB integration' #Created a service connection with Docker
+
+    repository: carpel/netflix
+
+    command: build
+
+    Dockerfile: Dockerfile
+
+    tags: latest
+
+    arguments: '--build-arg TMDB_V3_API_KEY=3dc76a37fdfb0526fbfd7afe62f18701 -t netflix'
+
+
+
+- task: Docker@2
+
+  displayName: 'Docker Push'
+
+  inputs:
+
+    containerRegistry: 'DockerHUB integration'
+
+    repository: carpel/netflix
+
+    command: push
+
+    tags: latest
+
+
+
+- task: SonarSource.sonarcloud.ce096e50-6155-4de8-8800-4221aaeed4a1.SonarCloudAnalyze@1
+
+  displayName: 'Run Code Analysis'
+
+
+
+- task: SonarSource.sonarcloud.38b27399-a642-40af-bb7d-9971f69712e8.SonarCloudPublish@1
+
+  displayName: 'Publish Quality Gate Result'
+
+
+
+- script: |
+   trivy image --exit-code 0 --severity HIGH,CRITICAL carpel/netflix >> $(Build.ArtifactStagingDirectory)/trivyreport.html
+
+  displayName: 'Run Trivy to scan Docker image'
+
+
+
+- task: PublishBuildArtifacts@1
+
+  displayName: 'Publish Artifact: drop'
+
+
+
