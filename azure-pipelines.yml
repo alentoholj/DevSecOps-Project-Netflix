@@ -23,9 +23,9 @@ steps:
 
   inputs:
 
-    SonarCloud: 'Sonar for Netflix'
+    SonarCloud: 'Netflix'
 
-    organization: Alen Toholj
+    organization: alentoholj
 
     scannerMode: CLI
 
