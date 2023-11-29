@@ -86,8 +86,8 @@ steps:
   
   
   - script: |
-     trivy image --exit-code 0 --severity HIGH,CRITICAL carpel/netflix >> $(Build.ArtifactStagingDirectory)/trivyreport.html
-  
+    trivy image --exit-code 0 --severity HIGH,CRITICAL carpel/netflix >> $(Build.ArtifactStagingDirectory)/trivyreport.html
+    
     displayName: 'Run Trivy to scan Docker image'
   
   
