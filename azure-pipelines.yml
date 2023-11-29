@@ -87,7 +87,48 @@ stages:
             displayName: 'Publish Artifact: drop'  
 
 
-#  - stage: DeploytoDEV
+  - stage: DeploytoDEV
+
+    displayName: 'Deploy to DEV environment'
+
+    jobs:
+
+      - deployment: 'Deployment to DEV environment'
+
+        pool: 
+
+          name: carpel-pool
+
+          demands: java
+        
+        environment: DEV
+
+        strategy: 
+
+          runOnce:
+
+            deploy:
+              
+              steps:
+
+                - task: AzureRmWebAppDeployment@4
+
+                  displayName: 'Deploy to Dev Web Service'
+
+                  inputs:
+
+                    azureSubscription: 'Klika-Sandbox (ea3a8333-e31b-4921-9d7b-41864e2d54d5)'
+
+                    appType: webAppContainer
+
+                    DockerNamespace: 'carpel-netflix-dev'
+
+                    DockerRepository: netflix
+
+            
+
+
+
 
 
 
