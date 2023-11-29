@@ -93,7 +93,7 @@ stages:
 
     jobs:
 
-      - deployment: 'Deployment to DEV environment'
+      - deployment: 'DeploymenttoDEV'
 
         pool: 
 
