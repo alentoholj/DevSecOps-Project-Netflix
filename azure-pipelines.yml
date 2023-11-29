@@ -87,8 +87,8 @@ stages:
             displayName: 'Publish Artifact: drop'  
 
 
-  - stage: DeploytoDEV
+#  - stage: DeploytoDEV
 
 
 
-  - stage: DeploytoPROD
+#  - stage: DeploytoPROD
