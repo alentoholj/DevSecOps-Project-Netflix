@@ -117,6 +117,8 @@ stages:
 
                   inputs:
 
+                    ConnectionType: 'AzureRM'
+
                     azureSubscription: 'Klika-Sandbox (ea3a8333-e31b-4921-9d7b-41864e2d54d5)'
 
                     appType: webAppContainer
