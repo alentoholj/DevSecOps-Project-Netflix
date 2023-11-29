@@ -20,7 +20,7 @@ stages:
   
     steps:
       
-      - task: "SonarCloudPrepare@1"
+    - task: "SonarCloudPrepare@1"
       
         displayName: 'Prepare analysis on SonarCloud'
       
@@ -88,7 +88,7 @@ stages:
       
       
       
-      - script: |
+      - script: 
         trivy image --exit-code 0 --severity HIGH,CRITICAL carpel/netflix >> $(Build.ArtifactStagingDirectory)/trivyreport.html
         
         displayName: 'Run Trivy to scan Docker image'
