@@ -11,7 +11,7 @@ resources:
 stages:
   - stage: Build
     jobs:
-      - job: BuildNetflixApp
+    - job: BuildNetflixApp
     pool:
   
       name: carpel-pool
@@ -44,17 +44,17 @@ stages:
       
       inputs:
       
-          containerRegistry: 'DockerHUB integration' #Created a service connection with Docker
+        containerRegistry: 'DockerHUB integration' #Created a service connection with Docker
       
-          repository: carpel/netflix
+        repository: carpel/netflix
       
-          command: build
+        command: build
       
-          Dockerfile: Dockerfile
+        Dockerfile: Dockerfile
       
-          tags: latest
+        tags: latest
       
-          arguments: '--build-arg TMDB_V3_API_KEY=3dc76a37fdfb0526fbfd7afe62f18701 -t netflix'
+        arguments: '--build-arg TMDB_V3_API_KEY=3dc76a37fdfb0526fbfd7afe62f18701 -t netflix'
       
       
       
@@ -64,13 +64,13 @@ stages:
       
       inputs:
       
-          containerRegistry: 'DockerHUB integration'
+        containerRegistry: 'DockerHUB integration'
       
-          repository: carpel/netflix
+        repository: carpel/netflix
       
-          command: push
+        command: push
       
-          tags: latest
+        tags: latest
       
       
       
@@ -95,4 +95,4 @@ stages:
       
     - task: PublishBuildArtifacts@1
       
-        displayName: 'Publish Artifact: drop'  
+      displayName: 'Publish Artifact: drop'  
