@@ -82,7 +82,7 @@ stages:
       
     - task: SonarCloudPublish@1
       
-        displayName: 'Publish Quality Gate Result'
+      displayName: 'Publish Quality Gate Result'
       
       
       
