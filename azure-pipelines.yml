@@ -121,7 +121,7 @@ stages:
 
                     appType: webAppContainer
 
-                    appName: 'carpel-netflix-dev'
+                    WebAppName: 'carpel-netflix-dev'
 
                     DockerNamespace: 'carpel-netflix-dev'
 
