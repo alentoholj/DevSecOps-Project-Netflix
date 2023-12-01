@@ -125,7 +125,7 @@ stages:
 
                     WebAppName: 'carpel-netflix-dev'
 
-                    DockerNamespace: 'carpel-netflix-dev'
+                    DockerNamespace: 'carpel'
 
                     DockerRepository: netflix
 
