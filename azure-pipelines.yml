@@ -129,11 +129,5 @@ stages:
 
                     DockerRepository: netflix
 
-            
-
-
-
-
-
 
 #  - stage: DeploytoPROD
