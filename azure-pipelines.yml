@@ -127,4 +127,4 @@ stages:
 
                     DockerNamespace: 'carpel'
 
-                    DockerRepository: netflix
+                    DockerRepository: 'netflix'
