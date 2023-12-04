@@ -3,3 +3,14 @@
 # DevSecOps Project CI/CD Flow
 
 ![DevSecOps-Netflix](https://github.com/alentoholj/DevSecOps-Project-Netflix/assets/82238804/eff70b24-821f-4175-82fd-e10f1e174d6a)
+
+## Prerequisites for this project:
+
+- Azure Subscription
+- Azure DevOps account
+- Dockerhub account
+- GitHub
+- SonarCloud account
+- Trivy
+- Slack
+- TMDB account
