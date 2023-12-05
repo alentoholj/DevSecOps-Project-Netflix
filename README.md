@@ -108,7 +108,7 @@ To create an agent pool:
 
 - Go to Azure DevOps
 - On the bottom left, go to Project Settings
-- Click on the Agent Polls
+- Click on the Agent Pools
 - Create an agent pool
 - Open the newly created agent pool
 - On the right side, click on "New agent"
