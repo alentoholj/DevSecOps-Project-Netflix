@@ -117,3 +117,40 @@ To create an agent pool:
 Of course, you don't need to create an agent pool and the agent, because you can use a default one on the Azure DevOps.
 
 ![Screenshot from 2023-12-05 01-02-40](https://github.com/alentoholj/DevSecOps-Project-Netflix/assets/82238804/5e843338-5a4e-4083-bbf7-01fb598fea46)
+
+## Phase 5: Create Azure Pipeline and Web App Service on Azure Cloud
+
+Before you create a Web App Service, you will need to push a docker image to the Dockerhub.
+
+Create Azure Pipeline:
+
+- Login into Azure DevOps
+- Go to Azure Pipelines
+- On the top-right side, click "New Pipeline"
+- Choose GitHub
+- Select repo
+- Fetching azure-pipelines.yml
+- Save and run
+
+After you create a pipeline, go to the Azure Portal to create an App Web Service:
+
+- Create a Resource Group
+- Create a Service plan for the App Web Service. Choose a Free pricing plan and Linux OS.
+- Create an App Service. In the section Publish, choose Docker Container, OS Linux, and Service Plan which you created previously, and go to the Docker section where you will choose DockerHub as a registry.
+
+![Screenshot from 2023-12-05 00-00-16](https://github.com/alentoholj/DevSecOps-Project-Netflix/assets/82238804/3c2b0010-bf1c-4938-a452-22d2f8146e2c)
+
+After you create an App Web Service, go to the Azure DevOps and run the Pipeline.
+
+**Results:**
+
+![Screenshot from 2023-12-05 00-00-42](https://github.com/alentoholj/DevSecOps-Project-Netflix/assets/82238804/8f75ed1f-5b90-417c-b047-89bd79f5916a)
+
+**Application:**
+
+![Screenshot from 2023-12-04 23-59-29](https://github.com/alentoholj/DevSecOps-Project-Netflix/assets/82238804/d2f358b2-9249-4c03-acd3-1afdbbf177ad)
+
+
+
+
+
