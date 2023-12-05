@@ -140,7 +140,7 @@ After you create a pipeline, go to the Azure Portal to create an App Web Service
 
 ![Screenshot from 2023-12-05 00-00-16](https://github.com/alentoholj/DevSecOps-Project-Netflix/assets/82238804/3c2b0010-bf1c-4938-a452-22d2f8146e2c)
 
-After you create an App Web Service, go to the Azure DevOps and run the Pipeline.
+When the creation is finished, go to the Azure DevOps and run the Pipeline.
 
 **Results:**
 
