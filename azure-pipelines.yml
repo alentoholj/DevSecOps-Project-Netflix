@@ -10,6 +10,10 @@ trigger:
     exclude:
       - "README.md"
 
+variables: 
+
+- group: 'TMDB'
+
 stages:
   - stage: Build
 
@@ -59,7 +63,7 @@ stages:
         
               tags: latest
         
-              arguments: '--build-arg TMDB_V3_API_KEY=3dc76a37fdfb0526fbfd7afe62f18701 -t netflix'
+              arguments: '--build-arg TMDB_V3_API_KEY=$(TMDB_V3_API_KEY) -t netflix'
           
           - task: Docker@2
       
