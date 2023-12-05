@@ -84,3 +84,36 @@ Again, run the Docker container but in this case, you will be able to see the Ne
 - Test Trivy
 
         trivy image carpel/netflix
+
+## Phase 3: Add service connections on the Azure DevOps
+
+To add service connections you will need to go to the Project settings --> Service Connections.
+
+In this section, you must add the connection to:
+
+- GitHub account
+- Dockerhub
+- Azure Subscription
+- SonarCloud
+
+![Screenshot from 2023-12-05 01-04-37](https://github.com/alentoholj/DevSecOps-Project-Netflix/assets/82238804/d9c824d7-47cc-4998-8a92-83c35b249c25)
+
+The explanation of the service connections on the Azure DevOps, you have on the link below:
+
+https://learn.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml
+
+## Phase 4: Create an agent pool and add a self-hosted agent to the pool
+
+To create an agent pool:
+
+- Go to Azure DevOps
+- On the bottom left, go to Project Settings
+- Click on the Agent Polls
+- Create an agent pool
+- Open the newly created agent pool
+- On the right side, click on "New agent"
+- Run the script, on the machine where you want to have your agent
+
+Of course, you don't need to create an agent pool and the agent, because you can use a default one on the Azure DevOps.
+
+![Screenshot from 2023-12-05 01-02-40](https://github.com/alentoholj/DevSecOps-Project-Netflix/assets/82238804/5e843338-5a4e-4083-bbf7-01fb598fea46)
