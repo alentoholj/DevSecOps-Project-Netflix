@@ -154,7 +154,7 @@ When the creation is finished, go to the Azure DevOps and run the Pipeline.
 ## Phase 6: Integrate Slack with Azure Pipeline
 
 - Go to Slack and create a channel
-- Add Azure pipelines application to the Slack
+- Add Azure pipelines application to the Slack:
   - Add App
   - Search Azure Pipelines
   - Install
