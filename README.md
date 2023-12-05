@@ -160,5 +160,9 @@ When the creation is finished, go to the Azure DevOps and run the Pipeline.
   - Install
 - Go to the channel and type /azpipelines subscribe [pipeline url/ project url]
 
+## Phase 7: Clean up resources from Azure after you finish with the project
 
+- Go to Azure Portal
+- Delete resources inside the Resource Group where you have App service
+- Delete the Resource Group
 
