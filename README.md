@@ -151,6 +151,14 @@ When the creation is finished, go to the Azure DevOps and run the Pipeline.
 ![Screenshot from 2023-12-04 23-59-29](https://github.com/alentoholj/DevSecOps-Project-Netflix/assets/82238804/d2f358b2-9249-4c03-acd3-1afdbbf177ad)
 
 
+## Phase 6: Integrate Slack with Azure Pipeline
+
+- Go to Slack and create a channel
+- Add Azure pipelines application to the Slack
+  - Add App
+  - Search Azure Pipelines
+  - Install
+- Go to the channel and type /azpipelines subscribe [pipeline url/ project url]
 
 
 
